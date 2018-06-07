@@ -15,5 +15,3 @@ const freeHandGlide = canvas => {
         }
     }
 }
-
-
