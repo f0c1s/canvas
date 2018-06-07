@@ -4,8 +4,9 @@ const freeHandGlide = canvas => {
             let lastPoint = null
 
             canvas.addEventListener('mousemove', e => {
-                const X = e.clientX
-                const Y = e.clientY
+                const rect = canvas.getBoundingClientRect()
+                const X = e.clientX - rect.left
+                const Y = e.clientY - rect.top
                 lastPoint = lastPoint || { X, Y }
                 let currentPoint = { X, Y }
                 const context = getContext(canvas)
